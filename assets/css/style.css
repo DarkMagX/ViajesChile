@@ -315,10 +315,6 @@ body {
     padding-right: 1rem;
     transition: all 0.25s;
   }
-
-  .bg-picture {
-    object-fit: cover !important;
-  }
 }
 
 /* Extra-small screens */
