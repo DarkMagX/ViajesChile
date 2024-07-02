@@ -214,5 +214,191 @@
         </div>
       </div>
     </section>
+
+    <!-- Carousel -->
+    <section>
+      <div
+        id="carouselExampleCaptions"
+        class="container carousel slide d-flex align-stretch-items"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="./assets/img/carousel1.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="./assets/img/carousel2.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="./assets/img/carousel3.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Destacados lg-screens -->
+    <section class="container featured-section" id="destacados">
+      <h2 class="text-center section-header">DESTACADOS</h2>
+      <div class="row" id="card-row">
+        <!-- Card 1 -->
+        <div
+          class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 d-flex align-content-stretch"
+        >
+          <div class="card">
+            <img src="./assets/img/card1.jpg" class="card-img-top" alt="..." />
+            <div class="card-body featured-body">
+              <p class="card-title place-name">Torres del Paine</p>
+              <p class="card-text">
+                Parque nacional en la Patagonia, mundialmente famoso por sus
+                imponentes montañas, sus glaciares y sus desafiantes circuitos
+                de trekking.
+              </p>
+              <button type="button" class="btn mt-4">Agendar viaje</button>
+            </div>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div
+          class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 d-flex align-content-stretch"
+        >
+          <div class="card">
+            <img src="./assets/img/card2.jpg" class="card-img-top" alt="..." />
+            <div class="card-body featured-body">
+              <p class="card-title place-name">Desierto de Atacama</p>
+              <p class="card-text">
+                El desierto más arido del mundo, con paisajes que recuerdan a
+                Marte, es ideal para observación astrónomica.
+              </p>
+              <button type="button" class="btn mt-5">Agendar viaje</button>
+            </div>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div
+          class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 d-flex align-content-stretch"
+        >
+          <div class="card">
+            <img src="./assets/img/card3.jpg" class="card-img-top" alt="..." />
+            <div class="card-body featured-body">
+              <p class="card-title place-name">Laguna Chaxa</p>
+              <p class="card-text">
+                Parte de 750km<sup>2</sup> de reserva natural, la laguna Chaxa
+                es un imperdible destino para avistar flamencos.
+              </p>
+              <button type="button" class="btn mt-5">Agendar viaje</button>
+            </div>
+          </div>
+        </div>
+        <!-- Card 4 -->
+        <div
+          class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 d-flex align-content-stretch"
+        >
+          <div class="card">
+            <img src="./assets/img/card4.jpg" class="card-img-top" alt="..." />
+            <div class="card-body featured-body">
+              <p class="card-title place-name">Frutillar</p>
+              <p class="card-text">
+                Encantador pueblo a orillas del Lago Llanquihue, famoso por su
+                cultura alemana y exhuberantes paisajes naturales.
+              </p>
+              <button type="button" class="btn mt-4">Agendar viaje</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Scripts -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      $(document).ready(function () {
+        $("a").on("click", function (event) {
+          if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
+            $("html, body").animate(
+              {
+                scrollTop: $(hash).offset().top,
+              },
+              700,
+              function () {
+                window.location.hash = hash;
+              }
+            );
+          }
+        });
+      });
+    </script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      const tooltipTriggerList = document.querySelectorAll(
+        '[data-bs-toggle="tooltip"]'
+      );
+      const tooltipList = [...tooltipTriggerList].map(
+        (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+      );
+    </script>
   </body>
 </html>
